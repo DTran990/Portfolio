@@ -1,4 +1,4 @@
-//navbar animation
+//Page Timeline
 
 const herotl = gsap.timeline()
 
@@ -8,6 +8,7 @@ herotl
     .from(".social-btns", {duration: 0.5, opacity: 0, stagger: .5},"< .5")
     .from("#hero-content h1", {duration: 1, opacity: 0, stagger: .5, onComplete: () => masterTl.play()},"< .75")  
 
+TweenMax.to("#down-btn i", {duration: 0.5, scaleX: 1.05, scaleY:1.1, repeat: -1, ease: "power.inOut"} )
 
 //typewriter animation
 const words = ["David Tran", "A Math/Computer Science Student", "A Front End Developer"];

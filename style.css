@@ -127,9 +127,12 @@ nav{
 }
 
 #down-btn{
+    text-align: center;
+}
+
+#down-btn i{
     color:rgb(126, 5, 5);
     z-index: 2;
-    text-align: center;
     padding-bottom: 25px;
 }
 
@@ -242,8 +245,12 @@ nav{
 }
 
 @media only screen and (max-width: 368px){
+
+    /* About Section */
+
     #about #desc p{
         font-size: 0.9rem;
         padding: 20px 20px;
     }
 }
+
