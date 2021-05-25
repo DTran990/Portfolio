@@ -1,12 +1,13 @@
+
 //Page Timeline
 
 const herotl = gsap.timeline()
 
 herotl
-    .from("nav", {duration: 1, y:'-100%', ease: "power1.out"})
-    .from("#down-btn", {duration: 1, opacity: 0, stagger: .5}, "<.5")
-    .from(".social-btns", {duration: 0.5, opacity: 0, stagger: .5},"< .5")
-    .from("#hero-content h1", {duration: 1, opacity: 0, stagger: .5, onComplete: () => masterTl.play()},"< .75")  
+    .from("nav", {duration: 0.7, y:'-100%', ease: "power1.out"})
+    .from("#down-btn", {duration: 0.7, opacity: 0, stagger: .5}, "<.2")
+    .from(".social-btns", {duration: 0.1, opacity: 0, stagger: .5},"-= 1")
+    .from("#hero-content h1", {duration: 0.7, opacity: 0, stagger: .5, onComplete: () => masterTl.play()})  
 
 TweenMax.to("#down-btn i", {duration: 0.5, scaleX: 1.05, scaleY:1.1, repeat: -1, ease: "power.inOut"} )
 
@@ -28,7 +29,6 @@ words.forEach(word => {
 let rellax = new Rellax('.rellax');
 
 ScrollOut({
-    threshold: .6,
     once: true 
 })
 
@@ -69,3 +69,25 @@ window.addEventListener('scroll', () => {
     }
     
 });
+
+//Projects Card Animation
+
+const cardtl = new TimelineMax({paused: true});
+
+cardtl
+    .from("#moviedex", {duration: 0.3, opacity: 0, ease: "power1.out"})
+    .from("#refresh", {duration: 0.3, opacity: 0, ease: "power1.out"}, "<.3")
+    .from("#necessities", {duration: 0.3, opacity: 0, ease: "power1.out"}, "<.3")
+    .from("#closedweather", {duration: 0.3, opacity: 0, ease: "power1.out"}, "<.3")
+    .from("#eduquat", {duration: 0.3, opacity: 0, ease: "power1.out"}, "<.3")
+
+let controller = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+    triggerElement: '#projects'
+}) 
+    .setTween(cardtl)
+    .reverse(false)
+    .addTo(controller);
+
+

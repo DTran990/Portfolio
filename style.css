@@ -143,7 +143,8 @@ nav{
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
-    min-height: 65vh;
+    min-height: 82vh;
+    overflow: hidden;
 }
 
 #about #desc{
@@ -160,7 +161,6 @@ nav{
     margin:auto;
     font-size: 2.4rem;
     padding-top: 45px;
-    
 }
 
 #about #desc h2 span{
@@ -198,7 +198,7 @@ nav{
 
 
 [data-scroll] {
-    transition: transform 3s;
+    transition: transform 1s;
 }
 
 [data-scroll="in"] {
@@ -206,7 +206,7 @@ nav{
 }
 
 [data-scroll="out"]{
-    transform: translateY(200px);
+    transform: translateY(110px);
 }
 
 /* Project section styles */
@@ -214,11 +214,77 @@ nav{
 #projects{
     width:100%;
     min-height: 100vh;
+    background: url('images/projects-bg.png') center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }
 
+#projects h3{
+    margin-top: 25px;
+    color:rgb(126, 5, 5);
+    font-size: 2.4rem;
+    text-align: center;
+    opacity: 0;
+}
+
+#projects #projectcardsection{
+    width: 70%;
+    height:90%;
+    display:flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+#projects #projectcardsection .card{
+    margin: 35px 8px;
+    background: rgb(126, 5, 5);
+    color:white;
+    -webkit-box-shadow: 6px 7px 15px -8px #bbbbbb; 
+    box-shadow: 6px 7px 15px -8px #bbbbbb;
+    text-align: center;
+    width: 22rem;
+}
+
+.card-body{
+    background: rgb(126, 5, 5);
+}
+
+.card-img-top{
+    height:200px;
+    width: 450px;
+    background:none;
+}
+
+.img-link:hover{
+    filter: brightness(0.6);
+}
+
+.card-link{
+    text-decoration: none;
+    color:white;
+    border: 1px solid black;
+    padding: 5px 8px;
+    border-radius: 15%;
+}
+
+.card-link:hover{
+    color:white;
+    background:rgb(109, 4, 4);
+}
 
 /* Media Queries */
-@media only screen and (max-width: 512px){
+
+@media screen and (max-width: 1460px){
+    #projects h3{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 512px){
 
     /* Hero Section */
 
@@ -244,13 +310,30 @@ nav{
 
 }
 
-@media only screen and (max-width: 368px){
+@media screen and (max-width: 500px){
+    #projects #projectcardsection{
+        width:100%; 
+        height:85%;
+    }
+    #projects #projectcardsection .card{
+       margin: 16px 5px;
+       width: 90%;
+    }
+}
+
+@media screen and (max-width: 368px){
 
     /* About Section */
+
 
     #about #desc p{
         font-size: 0.9rem;
         padding: 20px 20px;
     }
+
+    .card-img-top{
+        height:170px;
+    }
+
 }
 
