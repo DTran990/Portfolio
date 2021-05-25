@@ -19,8 +19,8 @@ let cursor = gsap.to(".cursor", {opacity: 0, ease: "power2.inOut", repeat: -1});
 let masterTl = gsap.timeline({repeat: -1}).pause();
 
 words.forEach(word => {
-    let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1})
-    tl.to('.text', {duration: 1, text: word})
+    let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 0.8})
+    tl.to('.text', {duration: 0.7, text: word})
     masterTl.add(tl);
 })
 
@@ -39,6 +39,10 @@ const navbar = document.querySelector('nav');
 
 if (screen.height <= 900){
     navbar.classList.add('scrolling-active');
+}
+
+if (window.scrollY > 0){
+    navbar.classList.add('scrolling-active')
 }
 
 window.addEventListener('scroll', () => {
@@ -60,6 +64,7 @@ window.addEventListener('scroll', () => {
         if (li.classList.contains(current)){
             li.classList.add('active');
         }
+
     });
     
     navbar.classList.toggle('scrolling-active', window.scrollY > 0);
