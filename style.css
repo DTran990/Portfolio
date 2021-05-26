@@ -368,6 +368,15 @@ nav{
     background:rgb(109, 4, 4);
 }
 
+#email-link{
+    text-decoration: none;
+    color:black;
+}
+
+#email-link:hover{
+    color:rgba(0, 0, 0, 0.548);
+}
+
 /* Footer Section Styles */
 
 footer{
