@@ -34,13 +34,13 @@ nav{
 
 .navbar-brand img{
     margin-left:25px;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .nav-item{
     margin-right:20px;
-    font-size:1.2rem;
+    font-size:0.9rem;
     
 }
 
@@ -49,7 +49,7 @@ nav{
     color:white;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
-    width: 100px;
+    width: 90px;
     margin:auto;
 }
 
@@ -122,7 +122,7 @@ nav{
 }
 
 #hero-content h1{
-    font-size: 2.3rem;
+    font-size: 1.9rem;
 }
 
 #hero-content h1 .hi span{
@@ -163,7 +163,7 @@ nav{
 
 #about #desc h2{
     margin:auto;
-    font-size: 2.4rem;
+    font-size: 2rem;
     padding-top: 45px;
 }
 
@@ -173,7 +173,7 @@ nav{
 
 #about #desc p{
     margin:auto;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     padding: 40px 80px;
 }
 
@@ -194,8 +194,8 @@ nav{
 }
 
 #about #skills #skillsimgs .skillimg{
-    width: 150px;
-    height:150px;
+    width: 120px;
+    height:120px;
     margin: 25px 50px;
 }
 
@@ -227,7 +227,7 @@ nav{
 #projects h3{
     margin-top: 25px;
     color:rgb(126, 5, 5);
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-align: center;
     opacity: 0;
 }
@@ -314,13 +314,13 @@ nav{
 
 #contact-form label{
     padding: 10px 0;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 #contact-form input{
     padding: 5px; 
     width: 400px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 #contact-form textarea{
@@ -328,7 +328,7 @@ nav{
     padding-bottom: 10px;
     width:400px;
     height: 200px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 #contact-info{
@@ -354,7 +354,7 @@ nav{
 }
 
 #contact-info p span{
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 #submit{
@@ -394,6 +394,7 @@ footer hr{
 
 footer p{
     padding: 5px 10px;
+    font-size: 0.8rem;
 }
 
 /* Media Queries */
@@ -406,7 +407,7 @@ footer p{
     #contact-form h3{
         opacity: 1;
         margin: 15px 0;
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
 }
 
@@ -424,14 +425,14 @@ footer p{
     }
 
     #contact-info p span{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
 @media screen and (max-width: 635px){
 
     #contact h3{
-        font-size:1.7rem;
+        font-size:1.5rem;
     }
 
     #contact #contact-form{
@@ -439,17 +440,17 @@ footer p{
     }
 
     #contact #contact-form label{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     #contact-form input{
         width: 92%;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     #contact-form textarea{
         width:92%;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     #contact-info p span{
@@ -462,7 +463,7 @@ footer p{
     /* Hero Section */
 
     #hero-content h1{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     #hero-content #socialspan .social-btns{
@@ -471,13 +472,13 @@ footer p{
 
     /* About Section */
     #about #desc p{
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 20px 40px;
     }
 
     #about #skills #skillsimgs .skillimg{
-        width: 70px;
-        height:70px;
+        width: 40px;
+        height:40px;
         margin: 25px 50px;
     }
 
@@ -500,7 +501,7 @@ footer p{
 
 
     #about #desc p{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         padding: 20px 20px;
     }
 
