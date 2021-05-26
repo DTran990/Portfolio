@@ -98,18 +98,19 @@ new ScrollMagic.Scene({
 
 // Contact form code
 
-const submit = document.querySelector("#submit");
-const inputs = document.querySelector("#contact-form");
+function sendMail(params){
+    let tempParams = {
+        from_firstname: document.getElementById("FirstName").value,
+        from_lastname: document.getElementById("LastName").value,
+        to_name: "David",
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("messages").value
+    }
 
-submit.addEventListener('click', (e) => {
-    e.preventDefault();
-    Email.send({
-        Host:"smtp.elasticemail.com",
-        Username: "davtran26@gmail.com",
-        Password: "DF02E5618704985C25ED44696673F6C6703F",
-        To: "davtran26@gmail.com",
-        From: inputs.elements["email"].value,
-        Subject:"Message sent from portfolio site.",
-        Body:inputs.elements["Message"].value + "<br>" + inputs.elements["FirstName"].value + inputs.elements["LastName"].value
-    }).then(msg => alert("Message Successfully Sent"))
-})
+    console.log(tempParams);
+
+    emailjs.send("service_lyoks3c", "template_73gq3rs", tempParams)
+        .then((response) => {
+            alert("Successfully sent!", response.status);
+        })
+}
