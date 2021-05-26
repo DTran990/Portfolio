@@ -113,4 +113,6 @@ function sendMail(params){
         .then((response) => {
             alert("Successfully sent!", response.status);
         })
+
+    document.getElementById('contact-form').reset();
 }
