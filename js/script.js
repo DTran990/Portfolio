@@ -19,7 +19,7 @@ let cursor = gsap.to(".cursor", {opacity: 0, ease: "power2.inOut", repeat: -1});
 let masterTl = gsap.timeline({repeat: -1}).pause();
 
 words.forEach(word => {
-    let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 0.8})
+    let tl = gsap.timeline({repeat: 1, yoyo: true, repeatDelay: 1.1})
     tl.to('.text', {duration: 0.7, text: word})
     masterTl.add(tl);
 })
